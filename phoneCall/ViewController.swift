@@ -14,12 +14,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func phoneCall() {
+        
+        let url: NSURL = URL(string: "TEL://1234567890")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+            
+    }
+    
+    @IBAction func makeCall(_ sender: Any) {
+        let url: NSURL = URL(string: "TEL://1234567890")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        
     }
 
-
+    // ต้อง test กับ iphone ของจริง
+    
 }
 
